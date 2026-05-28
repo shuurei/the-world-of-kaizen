@@ -1,0 +1,22 @@
+.button-next-chapter {
+    background-color: var(--dark-blue);
+    padding: 15px;
+    color: var(--s-300);
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 425px) {
+    .button-next-chapter {
+        padding: 10px;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .button-next-chapter {
+        padding: 15px;
+    }
+}

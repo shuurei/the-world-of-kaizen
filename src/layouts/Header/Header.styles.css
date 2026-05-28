@@ -1,0 +1,133 @@
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 50px auto;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1230px, 100%);
+    padding: 25px 40px;
+    margin: auto 50px;
+    background-color: var(--primary);
+    box-shadow: 0 0 5px 0 #00000075;
+}
+
+header .menu {
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+}
+
+header .title {
+    user-select: none;
+}
+
+.burger {
+    display: none;
+    padding: 4px;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  width: 25px;
+  margin: 5px;
+  background: var(--secondary);
+  transition: 0.5s ease;
+}
+
+header :has(.menu.open) .burger span:nth-child(1) { transform: rotate(-45deg) translate(-5px,6px ); }
+header :has(.menu.open) .burger span:nth-child(2) { transform: scale(0); opacity: 0; }
+header :has(.menu.open) .burger span:nth-child(3) { transform: rotate(45deg) translate(-5px,-6px ); }
+
+
+@media screen and (max-width: 920px) {
+    header .wrapper {
+        padding: 18px;
+    }
+
+    header .wrapper .header-link {
+        font-size: 0.8rem;
+    }   
+
+    header .wrapper .title {
+        font-size: 1.7rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        margin: 30px auto;
+        margin-bottom: 0;
+    }
+
+    header .wrapper {
+        margin: auto 30px;
+        padding: 15px;
+    }
+
+    header .wrapper .title {
+        font-size: 1.5rem;
+    }
+
+
+    header .menu {
+        z-index: 1000;
+        display: none;
+    }
+
+    header .menu.open {
+        position: absolute;
+        top: calc(100% + 15px);
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: unset;
+        padding: 10px;
+        background-color: var(--p-200);
+    }
+
+    header .menu .header-link {
+        display: block;
+        background-color: var(--s-100);
+        color: var(--primary);
+        border-radius: 0;
+        font-size: 1.1rem;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100svh;
+        background-color: rgba(0, 0, 0, 0.308);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        margin: 20px auto;
+        margin-bottom: 0;
+    }
+
+    header .wrapper {
+        margin: auto 20px;
+        padding: 15px;
+    }
+
+    header .wrapper .title {
+        font-size: 1.2rem;
+    }
+}
+

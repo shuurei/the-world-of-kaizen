@@ -1,0 +1,105 @@
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.icon-tab {
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--p-200);
+}
+
+.chapter-list {
+    display: flex;
+    flex-direction: column;
+    text-wrap: nowrap;
+    width: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.chapter-list.open {
+    width: 100%;
+}
+
+.chapter-list .content {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: 1s;
+}
+
+.chapter-list .content.open {
+    max-height: 100%;
+    transition: 1s;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.chapter-list .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    padding-right: 5px;
+    gap: 20px;
+    background-color: var(--p-100);
+}
+
+.chapter-list .header > span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.chapter-list:has(.content.open) .icon {
+    transform: rotateZ(180deg);
+}
+
+.chapter-list .icon {
+    width: 48px;
+    transition: 0.5s;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .chapter-list .header > span {
+        font-size: 1rem;
+    }
+
+    .chapter-list .icon {
+        width: 32px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .chapter-list .content.open {
+        max-height: 462px;
+    }
+
+    .chapter-list .header > span {
+        font-size: 1.2rem;
+    }
+
+    .chapter-list .icon {
+        width: 30px;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    .chapter-list .header {
+        padding: 10px 15px;
+    }
+
+    .chapter-list .header > span {
+        font-size: 1rem;
+    }
+
+    .chapter-list .icon {
+        width: 32px;
+    }
+}

@@ -1,0 +1,26 @@
+.chapter-list-link {
+    user-select: none;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    background-color: var(--secondary);
+    text-decoration: none;
+    color: var(--primary);
+    transition: .2s;
+}
+
+.chapter-list-link.readed {
+    background-color: var(--dark-secondary);
+}
+
+.chapter-list-link.active {
+    background-color: var(--light-blue);
+    color: var(--s-300);
+}
+
+@media screen and (max-width: 425px) {
+    .chapter-list-link {
+        font-size: 0.9rem;
+    }
+}

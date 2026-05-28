@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+  --primary: #2E3440;
+  --p-100: #3B4252;
+  --p-200: #4C566A;
+
+  --secondary: #D8DEE9;
+  --dark-secondary: #b5bcca;
+  --s-100: #E5E9F0;
+  --s-200: #ECEFF4;
+  --s-300: #f2f7ff;
+
+
+  --light-blue: #7cacff;
+  --dark-blue: #5982ca;
+  --light-red: #ff6c6c;
+  --light-green: #5bb177;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--secondary);
+  color: white;
+  min-height: 100svh;
+}
+
+body:has(.menu.open) {
+  overflow-y: hidden;
+}
+
+::selection {
+  color: var(--primary);
+  background: var(--secondary);;
+}

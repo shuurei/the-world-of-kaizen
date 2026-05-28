@@ -1,0 +1,14 @@
+.header-link {
+    user-select: none;
+    text-decoration: none;
+    color: var(--s-100);
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: .3s;
+}
+
+.header-link.active {
+    border-radius: 8px;
+    color: var(--s-200);
+    background-color: rgb(from var(--secondary) r g b / 20%);
+}

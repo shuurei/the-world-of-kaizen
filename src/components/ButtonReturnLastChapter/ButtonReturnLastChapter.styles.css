@@ -1,0 +1,15 @@
+.button-last-chapter {
+    background-color: var(--light-green);
+    padding: 15px;
+    color: var(--s-300);
+    text-decoration: none;
+    font-weight: 600;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 425px) {
+    .button-last-chapter {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+}

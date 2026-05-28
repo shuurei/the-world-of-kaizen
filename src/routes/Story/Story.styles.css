@@ -1,0 +1,70 @@
+.story {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.page {
+    padding: 20px 30px;
+    background-color: var(--p-200);
+    white-space: break-spaces;
+    line-height: 1.5;
+    width: 100%;
+    height: fit-content;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.story:has(.presentation) {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .page {
+        padding: 20px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .story {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .page {
+        padding: 15px 20px;
+        font-size: 0.8rem;
+    }
+
+    .presentation {
+        gap: 8px;
+    }
+
+    .presentation .title {
+        font-size: 1.4rem;
+    }
+    
+    .presentation .description {
+        font-size: 0.8rem;
+    }
+}

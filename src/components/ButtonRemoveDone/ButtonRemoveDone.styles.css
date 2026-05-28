@@ -1,0 +1,6 @@
+.button-remove-done {
+    background-color: var(--light-red);
+    border: none;
+    height: fit-content;
+    padding: 5px;
+}

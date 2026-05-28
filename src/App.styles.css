@@ -1,0 +1,32 @@
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    padding: 50px;
+    max-width: 1230px;
+    width: calc(100% - 100px);
+    margin: 50px;
+    margin-top: 0;
+    background-color: var(--primary);
+    box-shadow: 0 0 5px 0 #00000075;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 30px;
+        margin: 30px;
+        width: calc(100% - 60px);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main {
+        margin: 20px;
+        padding: 20px;
+        width: calc(100% - 40px);
+    }
+}

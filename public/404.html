@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			const path = window.location.pathname
+				.replace('/the-world-of-kaizen', '')
+				.replace(/^\//, '')
+			window.location.replace('/the-world-of-kaizen/?' + path)
+		</script>
+	</head>
+</html>
